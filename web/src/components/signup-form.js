@@ -75,7 +75,8 @@ class SignupForm extends Component {
       })
       .then(data => {
         data.data.signUpWithGoogle.success
-          ? this.props.history.push("/") // Check this logic(when success===true) when if react-router add
+          ? // TODO : redirect to the "/" page(landing page) with authentication info
+            this.props.history.push("/") // Check this logic(when success===true) when if react-router add
           : window.location.reload(false);
       });
   };
