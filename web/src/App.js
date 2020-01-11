@@ -1,6 +1,6 @@
 import React from "react";
 import Signup from "./pages/signup";
-
+import { BrowserRouter } from "react-router-dom";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "apollo-boost";
 
@@ -11,8 +11,9 @@ const client = new ApolloClient({
 function App() {
   return (
     <div>
-      Main
-      <Signup client={client} />
+      <BrowserRouter path="/">
+        <Signup client={client} />
+      </BrowserRouter>
     </div>
   );
 }
