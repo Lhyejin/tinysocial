@@ -1,18 +1,18 @@
 import React from 'react';
-import Landing from './pages/landing';
+import Signup from './pages/signup'
 
 import ApolloClient from "apollo-boost";
-import { ApolloProvider } from "react-apollo";
+import { ApolloProvider } from "apollo-boost";
 
 const client = new ApolloClient({
-    uri: "http://localhost:4000"
+    uri: "http://localhost:15780"
 });
 
 function App() {
   return (
       <div>
         Main
-        <Landing client={client} />
+        <Signup client={client} />
       </div>
   );
 }
